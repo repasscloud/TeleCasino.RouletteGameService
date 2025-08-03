@@ -23,7 +23,7 @@ jobs:
       - name: Test API endpoint
         run: |
           curl -v -X POST \
-            'http://localhost:8080/api/Roulette/play?wager=1&betArg=_2nd12&gameSessionId=221' \
+            'http://localhost:5147/api/Roulette/play?wager=1&betArg=_2nd12&gameSessionId=221' \
             -H 'accept: text/plain' \
             -H 'Content-Type: application/json' \
             -d ''
@@ -31,7 +31,7 @@ jobs:
       - name: Test video availability
         run: |
           ID=$(curl -s -X POST \
-            'http://localhost:8080/api/Roulette/play?wager=1&betArg=_2nd12&gameSessionId=221' \
+            'http://localhost:5147/api/Roulette/play?wager=1&betArg=_2nd12&gameSessionId=221' \
             -H 'accept: application/json' \
             -H 'Content-Type: application/json' \
             -d '' | jq -r '.videoFile') && \
