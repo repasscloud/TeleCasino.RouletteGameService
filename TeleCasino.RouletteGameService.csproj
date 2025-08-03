@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <RootNamespace>TeleCasino.RouletteGameService</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+
+    <!-- Disable PDB generation -->
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
+
+    <!-- Disable default inclusion so we can explicitly manage files -->
+    <EnableDefaultContentItems>false</EnableDefaultContentItems>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.5" />
+    <PackageReference Include="Nanoid" Version="3.1.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="9.0.3" />
+  </ItemGroup>
+
+  <!-- Explicitly include wwwroot for publish -->
+  <ItemGroup>
+    <Content Include="wwwroot/**" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

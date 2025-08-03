@@ -1,0 +1,5 @@
+@TeleCasino.RouletteGameService_HostAddress = http://localhost:5147
+
+Accept: application/json
+
+###
