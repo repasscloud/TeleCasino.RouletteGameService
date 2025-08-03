@@ -33,7 +33,7 @@ jobs:
           ID=$(curl -s -X POST \
             'http://localhost:8080/api/Roulette/play?wager=1&betArg=_2nd12&gameSessionId=221' \
             -H 'accept: application/json' \
-            -d '' | jq -r '.videoFile') && \
+            -d '' | jq -r '.videoFile' | sed 's|/app/wwwroot/||') && \
           curl -s -o /dev/null -w "%{http_code}\n" "http://localhost:8080/${ID}"
 
       - name: Stop container
