@@ -108,7 +108,7 @@ TeleCasino.RouletteGame spinX1 2 --bet split_14_17 --json
 
 ## Payout Table
 
-| Bet Type    | Format Example     | Odds   |
+| Bet Type    | Format Example    | Odds   |
 |-------------|-------------------|--------|
 | Straight    | `n17`             | 35:1   |
 | Split       | `split_14_17`     | 17:1   |
