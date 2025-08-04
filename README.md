@@ -1,9 +1,11 @@
 # TeleCasino Roulette Game
 
+[![🧪 Test API in Docker](https://github.com/repasscloud/TeleCasino.RouletteGameService/actions/workflows/test-api.yml/badge.svg)](https://github.com/repasscloud/TeleCasino.RouletteGameService/actions/workflows/test-api.yml)
+[![🚀 Publish Docker Container (linux-x64)](https://github.com/repasscloud/TeleCasino.RouletteGameService/actions/workflows/docker-image.yml/badge.svg)](https://github.com/repasscloud/TeleCasino.RouletteGameService/actions/workflows/docker-image.yml)
+![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/repasscloud/TeleCasino.RouletteGameService?label=version)
+
 A command-line Roulette spin animation and result generator built with .NET.  
 Users place bets on single numbers, splits, corners, columns, dozens, colors, parity, high/low, basket, or trios, and receive an animated video of the spin plus a JSON summary.
-
----
 
 ## Features
 
@@ -15,8 +17,6 @@ Users place bets on single numbers, splits, corners, columns, dozens, colors, pa
 
 - **JSON output**: Detailed result including wager, bet type, winning number, payout, net gain, and generated video file.  
 - **Realistic table rules**: Supports all major European/American roulette bet types.
-
----
 
 ## Installation
 
@@ -36,8 +36,6 @@ Users place bets on single numbers, splits, corners, columns, dozens, colors, pa
    - `green_0.mp4`, `green_00.mp4`  
    - `roulette_ball_red.mp4`, `roulette_ball_black.mp4`, `roulette_ball_green.mp4`
 
----
-
 ## Build & Publish
 
 ```bash
@@ -50,8 +48,6 @@ dotnet publish -c Release
 # The single-file, self-contained binary will be in:
 #   bin/Release/net9.0/<RID>/publish/TeleCasino.RouletteGame
 ```
-
----
 
 ## Usage
 
@@ -96,15 +92,11 @@ TeleCasino.RouletteGame spinX1 2 --bet split_14_17 --json
 }
 ```
 
----
-
 ## Rules & Parameters
 
 - **Valid wagers**: 1, 2, or 5  
 - **Bet types**: Straight (35:1), Split (17:1), Street (11:1), Corner (8:1), Column/Dozen (2:1), Color/Even/Odd/High/Low (1:1), Basket (6:1), Trio (11:1).  
 - **House edge**: American table with double zero (5.26% house edge).
-
----
 
 ## Payout Table
 
@@ -121,8 +113,6 @@ TeleCasino.RouletteGame spinX1 2 --bet split_14_17 --json
 | High/Low    | `high`            | 1:1    |
 | Basket      | `basket`          | 6:1    |
 | Trio        | `trio12`          | 11:1   |
-
----
 
 ## License
 
