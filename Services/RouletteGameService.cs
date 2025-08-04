@@ -55,7 +55,7 @@ public class RouletteGameService : IRouletteGameService
             Wager = wager,
             Payout = payout,
             NetGain = netGain,
-            VideoFile = animation,
+            VideoFile = Path.GetFileName(animation),
             Win = netGain > 0
                 ? true
                 : false,
